@@ -1,24 +1,54 @@
-# README
+## Bikes API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Tech
+Ruby version 2.5
+SQLite 3
 
-Things you may want to cover:
+This API was created for use in the Rent-bike mobile app. The whole app is for a college project
 
-* Ruby version
+### Users
+Users are the regular people who will rent the bikes
 
-* System dependencies
+#### requests
+**Create users**  ` localhost:3000/users`
+   the body for this request:
+   ```
+   {
+    "user": {
+      "name": "Hermione Granger",
+      "email": "hermione@email.com",
+      "password": "psw123",
+      "password_confirmation": "psw123",
+      "document": "12332145678",
+      "phone": 11999112244,
+      "credit_card_number": 1234567899887,
+      "credit_card_name": "hermione granger",
+      "credit_card_cvv": 123,
+      "credit_card_expiration_date": "04/21"
+    }
+  }
+  ```
 
-* Configuration
 
-* Database creation
+### Advertisers
+Advertisers are the people who have bikes for rental
 
-* Database initialization
+  **Create Advertisers** ` localhost:3000/advertisers`
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+   the body for this request:
+   ```
+   {
+    "advertiser": {
+      "name": "Harry Potter",
+      "email": "harry@email.com",
+      "password": "12345",
+      "password_confirmation": "12345",
+      "document": "12332145678",
+      "phone": 1199256676,
+      "agency": 2244,
+      "account_number": "12345-7",
+      "bank_name": "bank x",
+      "account_type": "cc"
+    }
+  }
+  ```
