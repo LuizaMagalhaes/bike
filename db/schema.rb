@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_13_110630) do
+ActiveRecord::Schema.define(version: 2020_05_13_114641) do
+
+  create_table "advertisers", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password"
+    t.string "password_confirmation"
+    t.integer "document"
+    t.integer "phone"
+    t.string "agency"
+    t.string "account_number"
+    t.string "bank_name"
+    t.string "account_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
