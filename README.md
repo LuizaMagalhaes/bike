@@ -6,11 +6,11 @@ SQLite 3
 
 This API was created for use in the Rent-bike mobile app. The whole app is for a college project
 
-### Users
+## Users
 Users are the regular people who will rent the bikes
 
-#### requests
-**Create users**  ` localhost:3000/users`
+### requests
+**Create users**  ` POST localhost:3000/users`
    the body for this request:
    ```
    {
@@ -28,12 +28,32 @@ Users are the regular people who will rent the bikes
     }
   }
   ```
+**Find user**  `GET localhost:3000/users/:id`
 
+**Find all users**  `GET localhost:3000/users`
 
+**Update users**  ` PUT localhost:3000/users/:id`
+   the body for this request:
+   ```
+   {
+    "user": {
+      "name": "Hermione GRanger",
+      "email": "hermione@email.com",
+      "password": "psw123",
+      "password_confirmation": "psw123",
+      "document": "12332145678",
+      "phone": 11999112244,
+      "credit_card_number": 1234567899887,
+      "credit_card_name": "hermione granger",
+      "credit_card_cvv": 567,
+      "credit_card_expiration_date": "04/21"
+    }
+  }
+  ```
 ### Advertisers
 Advertisers are the people who have bikes for rental
 
-  **Create Advertisers** ` localhost:3000/advertisers`
+  **Create Advertisers** `POST localhost:3000/advertisers`
 
    the body for this request:
    ```

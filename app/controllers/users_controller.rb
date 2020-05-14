@@ -1,7 +1,25 @@
 class UsersController < ApplicationController
   def create
-    user = User.create(user_params)
-    render json: user, status: :created
+    @user = User.create(user_params)
+    render json: @user, status: :created
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if  @user.update(user_params)
+      redirect_to @user
+    else
+      render "edit"
+    end
+  end
+
+  def show
+    @user = User.find(params[:id])
+    render json: @user, status: :ok
   end
 
   private
