@@ -72,3 +72,26 @@ Advertisers are the people who have bikes for rental
     }
   }
   ```
+
+### Bicycles
+Bicycles belongs to advertiser
+
+  **Create bicycles** `POST localhost:3000/bicycles`
+
+   the body for this request:
+   ```
+   {
+	  "bicycle": {
+		"title": "bike vintage",
+		"price": 50,
+		"longitude": -23.5870745,
+		"latitude": -46.6560565,
+		"description": "bike linda com cestinha",
+		"available": true,
+		"image_url": "encurtador.com.br/QWY26"
+	}
+}
+```
+**Find bicycle**  `GET localhost:3000/bicycles/:id`
+
+**Find all bicycles**  `GET localhost:3000/bicycles`
