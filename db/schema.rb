@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_13_114641) do
+ActiveRecord::Schema.define(version: 2020_05_15_005215) do
 
   create_table "advertisers", force: :cascade do |t|
     t.string "name"
@@ -23,6 +23,18 @@ ActiveRecord::Schema.define(version: 2020_05_13_114641) do
     t.string "account_number"
     t.string "bank_name"
     t.string "account_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bicycles", force: :cascade do |t|
+    t.string "title"
+    t.float "price"
+    t.decimal "longitude", precision: 10, scale: 6
+    t.decimal "latitude", precision: 10, scale: 6
+    t.string "description"
+    t.boolean "available"
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
