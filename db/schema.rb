@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2020_05_15_005215) do
     t.string "description"
     t.boolean "available"
     t.string "image_url"
+    t.integer "advertiser_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

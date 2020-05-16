@@ -8,6 +8,7 @@ class CreateBicycles < ActiveRecord::Migration[5.2]
       t.string :description
       t.boolean :available
       t.string :image_url
+      t.integer :advertiser_id
 
       t.timestamps
     end
