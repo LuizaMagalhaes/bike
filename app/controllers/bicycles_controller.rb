@@ -6,7 +6,7 @@ class BicyclesController < ApplicationController
   end
 
   def create
-    @bicycle = Bicycle.create!(bicycle_params)
+    @bicycle = Bicycle.create(bicycle_params)
     render json: @bicycle, status: :created
   end
 
