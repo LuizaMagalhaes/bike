@@ -82,16 +82,17 @@ Bicycles belongs to advertiser
    ```
    {
 	  "bicycle": {
-		"title": "bike vintage",
-		"price": 50,
-		"longitude": -23.5870745,
-		"latitude": -46.6560565,
-		"description": "bike linda com cestinha",
-		"available": true,
-		"image_url": "encurtador.com.br/QWY26"
-	}
-}
-```
+      "title": "bike vintage",
+      "price": 50,
+      "longitude": -23.5870745,
+      "latitude": -46.6560565,
+      "description": "bike linda com cestinha",
+      "available": true,
+      "image_url": "encurtador.com.br/QWY26",
+      "advertiser_id": 1
+	  }
+  }
+  ```
 **Find bicycle**  `GET localhost:3000/bicycles/:id`
 
 **Find all bicycles**  `GET localhost:3000/bicycles`
