@@ -3,7 +3,6 @@ class BicyclesController < ApplicationController
   def index
     bicycle = Bicycle.all
     render json: bicycle, status: :ok
-
   end
 
   def create
@@ -14,6 +13,15 @@ class BicyclesController < ApplicationController
   def show
    bicycle = Bicycle.find(params[:id])
     render json: bicycle, status: :ok
+  end
+
+  def update
+   bicycle = Bicycle.find(params[:id])
+    if bicycle.update(bicycle_params)
+      redirect_tobicycle
+    else
+      render "edit"
+    end
   end
 
   private
