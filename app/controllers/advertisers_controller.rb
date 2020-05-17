@@ -4,6 +4,10 @@ class AdvertisersController < ApplicationController
     render json: advertiser, status: :created
   end
 
+  def show
+    advertiser = Advertiser.find(params[:id])
+    render json: advertiser, status: :ok
+  end
   private
 
     def advertiser_params

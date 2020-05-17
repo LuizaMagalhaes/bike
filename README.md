@@ -52,6 +52,7 @@ Users are the regular people who will rent the bikes
   ```
 ### Advertisers
 Advertisers are the people who have bikes for rental
+  **Find advertiser**  `GET localhost:3000/advertisers/:id`
 
   **Create Advertisers** `POST localhost:3000/advertisers`
 
